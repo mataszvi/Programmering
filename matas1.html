@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 2</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+  // 1. Skapa variabler för första figuren
+  //var x = 280;
+  //var y = 200;
+  //var storlek = 80;
+ // var farg = "red"
+
+  // Rita första figuren med variabler
+  //circle(x, y, storlek, farg);
+
+  // 2. Skapa ett objekt för andra figuren (player)
+  //var player = { x: 280, y: 360, size: 80, color: "green" };
+
+  // Rita andra figuren med objektets egenskaper
+  //circle(player.x, player.y, player.size, player.color);
+
+
+var spelare= {
+  X: 400,
+Y: 100
+}
+
+
+line(spelare.X, spelare.Y + 100, spelare.X, spelare.Y + 300, 10, "darkred");
+ring( spelare.X, spelare.Y + 50, 50, 10, "darkred");
+rectangle(spelare.X - 75, spelare.Y + 150, 150, 10, "darkred");
+line(spelare.X, spelare.Y + 300, spelare.X - 75, spelare.Y + 375, 10, "darkred");
+line(spelare.X, spelare.y + 300, spelare.X + 75, spelare.Y + 375, 10, "darkred");
+
+
+
+
+var enamy = {
+    x: 100,
+    y:265,
+    c: "grey"
+}
+
+
+var player = {
+    x: 659,
+    y: 300,
+    c: "darkred"
+}
+
+
+
+// denna ska bli till ett player
+rectangle (enamy.x, enamy.y, 80, 80, enamy.c);
+
+
+// ett enamy som jag försöker att utveckla just nu men går inte så bra
+circle(player.x, player.y, 40, player.c);
+
+
+
+
+  </script>
+</body>
+</html>
+

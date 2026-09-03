@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+//   var player = { x: 50, y: 200, size: 40, color: "blue", speed: 3 };
+
+rectangle( 200, 100, 300, 500, "lightblue")
+ player = {
+
+    x: 500,
+    y: 200,
+    size: 40, 
+    color: "blue",
+    speed: random(-3, 10)
+  }
+  
+
+  function update() {
+    clearScreen();
+
+    circle(player.x, player.y, player.size, player.color);
+
+    
+
+
+    player.x = player.x + player.speed + 0.98
+    //console.log(player.speed)
+    player.y = player.y + player.speed
+
+
+    if(player.y > totalHeight - 40) {
+      player.y = totalheight - 40
+
+    }
+  }
+
+ 
+
+  </script>
+</body>
+</html>
