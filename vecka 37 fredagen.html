@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+  var player = {x:200, y:200, size: 40, color: "red", speedX:6, speedY:6 , direction: 1, directionY:1};
+
+  function update() {
+
+    clearScreen();
+
+    // circle(player.x, player.y, player.size, player.color);
+    rectangle(player.x, player.y, 150, 100, player.color)
+    picture(player.x, player.y, "https://shorturl.at/tQfCC", 150, 100)
+    player.x = player.x + player.speedX * player.direction;
+    player.y = player.y + player.speedY * player.directionY;
+  
+
+    if (player.x + 150 > totalWidth) {
+      player.color = mixColor(random(256), random(256), random(256))
+      player.direction = -2;
+      console.log("höger")
+    }
+  
+    if (player.x < 0) {
+      player.color = mixColor(random(256), random(256), random(256))
+      player.direction = 2;
+      console.log("vänster")
+
+    }
+
+    if (player.y < 0) {
+    player.color = mixColor(random(256), random(256), random(256)) 
+      player.directionY = 2;
+      console.log("tak")
+    }
+
+    if (player.y + 100 > totalHeight) 
+    {
+      player.color = mixColor(random(256), random(256), random(256)) 
+      player.directionY = -2;
+      console.log("golv")
+    }
+
+   if(player.x < 0 && player.y < 0) {
+    text(100, 100, 40, "you win", "black")
+    stopupdate()
+    // console.log("dwdw")
+
+
+
+   }
+
+
+
+
+
+
+
+
+  }
+
+  </script>
+</body>
+</html> 
