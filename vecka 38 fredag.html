@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+  
+    var color = "red"
+    var size = 50
+
+    function update() {
+        if(mouse.left) {
+          if(keyboard.q){
+            rectangle(mouse.x, mouse.y, 50, 50, color)
+          } else{
+            circle(mouse.x, mouse.y, size, color)
+          }
+            
+        }
+        if(mouse.right) {
+            circle(mouse.x, mouse.y, size, "white")
+        }
+        if(keyboard.one) {
+          color = "green"
+        }
+        if(keyboard.two) {
+          color = "red"
+   
+        }
+        if(keyboard.three) {
+          color="blue"
+        }
+
+        if(keyboard.up) {
+          size++
+        }
+        if(keyboard.down) {
+          size--
+          if(size < 1){
+            size = 1
+          }
+          
+        }
+        // if(keyboard.q) {
+        //   rectangle(mouse.x, mouse.y, 50, 50)
+        // }
+
+
+
+
+
+
+        text(50, 50, 40, "färgen är: ", "black")
+        circle(500,35,20, color)
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
