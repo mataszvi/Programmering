@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+    var player = { x: 400, y: 300, size: 30, color: "darkred", speed: 4};
+    
+
+    function update() {
+
+        clearScreen();
+      circle(player.x, player.y, player.size, player.color);
+      player.x = player.x + player.speed;
+      player.y = player.y + player.speed;
+    }
+
+    if (keyboard.right) {
+      player.x = player.x + player.speed;
+    }
+    if (keyboard.left) {
+      player.x = player.x - player.speed;
+    }
+    
+  </script>
+</body>
+</html> 
