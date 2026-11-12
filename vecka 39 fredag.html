@@ -15,11 +15,12 @@ var zombie2 = { x: 500, y: 400, speed: 2 };
 var zombie3 = { x: 700, y: 260, speed: 2 };
 
 function drawZombie(x, y) {
-  rectangle(x + 3, y - 10, 23, 65, "lightgreen");
+  rectangle(x + 3, y - 10, 23, 65, "darkgreen");  //tänkte att göra zombiesarna mörkare för att de ska se mer skrämmande ut
+                                                  //och för att de ska ser mer ut som zombies än de gjorde innan
   rectangle(x + 3, y - 25, 23, 65, "gray");
-  circle(x + 15, y - 40, 20, "lightgreen");
+  circle(x + 15, y - 40, 20, "darkgreen");
   circle(x, y - 40, 3, "red");
-  rectangle(x - 35, y - 20, 30, 14, "lightgreen");
+  rectangle(x - 35, y - 20, 30, 14, "darkgreen");
   rectangle(x - 20, y - 20, 30, 14, "gray");
 }
 

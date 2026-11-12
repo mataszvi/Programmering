@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+// Min idea att göra en sorts av hav som du skulle kunna dycka runt och letta efter olika sorter av gold och inte bli tagen av monster eller figuren
+  // 1. måla ett hav x
+  // 2. måla en spelare x
+  // 3. måla en botten av havet x
+  // 4. måla ut skatter x  
+  //   4a. OM man ska kunna plocka upp skatter, så måste dom vara i en lista (array)x
+  // 5. OM spelaren krockar med en skatt så ska den "plockas upp" och försvinna
+  // 6. En fiende målas ut
+  // 7. Fieneden jagar spelaren 
+  // 8. OM fiende krocka med spelare så förlorar man 
+
+    var player = { x:400, y:300, size:30, color:"darkred", speed:4}; //litte mer detaljerad spelare med var functionen
+
+    var skatt = [
+      { x: random(100, totalWidth - 100), y: random(200, totalHeight), size: 50, color: "yellow" }
+    ];
+    
+
+    function havet() {
+      rectangle(0, 0, totalWidth, totalHeight, "blue"); // Målar havet
+      rectangle(0, 0, totalWidth, 200, "lightblue"); // Målar ytan
+      rectangle(0, totalHeight - 200, totalWidth, 200, "grey"); // Målar botten
+    }
+    havet()
+
+    circle(player.x, player.y, player.size, player.color); // målar spelaren
+    rectangle(random(100, totalWidth - 100), random(200, totalHeight - 260), 50, 50, "yellow")// målar ut en skatt
+
+
+
+
+  </script>
+</body>
+</html> 
+
+
+
