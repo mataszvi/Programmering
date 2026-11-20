@@ -8,9 +8,11 @@
 <body>
   <script src="http://koda.nu/simple.js">
 
-  var player = { x: 50, y: 200, size: 20, color: "red", speed: 3};
-
-    
+  var player = { x: 50, y: 200, size: 20, color: "red", speed: 3}; //en vanlig variabel för player
+  
+    // 1. Skapa objekt för första väggen. 
+    // 2. Skapa objekt för alla kommande väggar 
+    // 2a. Skapa gärna väggarna först, flytta sedan koordinater + bredd + höjd till objekt 
     /*function update() {
         clearScreen()
         circle(player.x, player.y, player.size, player.color);
@@ -18,25 +20,66 @@
     }
 */
 
+  var wall1 = { x: 100, y: 100, width: 30, height: 1000, color:"black" }
+  var wall2 = { x: 100, y: 100, width: 200, height: 30, color:"black" }
+  var wall3 = { x: 300, y: 100, width: 200, height: 30, color:"black" }
+  var wall4 = { x: 200, y: 200, width: 200, height: 30, color:"black" }
+  var wall5 = { x: 285, y: 130, width: 30, height: 90, color:"black" }
+  var wall6 = { x: 300, y: 290, width: 30, height: 90, color:"black" }
+  var wall7 = { x: 300, y: 290, width: 30, height: 90, color:"black" }
+  var wall8 = { x: 300, y: 290, width: 30, height: 90, color:"black" }
+  var wall9 = { x: 500, y: 100, width: 30, height: 200, color:"black" }
+  
+
+
+
+
   function update(){
     clearScreen();
     circle(player.x, player.y, player.size, player.color);
 
+    // Använd wall1's egenskaper
+    rectangle(100, 100, 30, 1000, "black")
+
+    // Skapa fler väggar 
+    rectangle(100, 100, 200, 30, "black")
+    rectangle(300, 100, 200, 30, "black")
+    rectangle(200, 200, 200, 30, "black")
+    rectangle(285, 130, 30, 90, "black")
+    rectangle(300, 290, 30, 90, "black")
+    rectangle(200, 200, 30, 90, "black")
+    rectangle(100, 350, 200, 30, "black")
+    rectangle(500, 100, 30, 200, "black" )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if (keyboard.right) {
-    player.x = player.x + player.speed;
+    player.x = player.x + player.speed; // spelaren går höger
   }
   if (keyboard.left) {
-    player.x = player.x - player.speed;
+    player.x = player.x - player.speed; // spelaren går vänster
   }
   if (keyboard.up) {
-    player.y = player.y - player.speed;
+    player.y = player.y - player.speed; // spelaren går framot eller up
   }
   if (keyboard.down) {
-    player.y = player.y + player.speed;
+    player.y = player.y + player.speed; // spelaren går tillbaka eller ner
   }
 
    }
 
+   
 
 
 
