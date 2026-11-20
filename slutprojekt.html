@@ -1,7 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapitel 1 Lektion 1</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+
+  var player = { x: 50, y: 200, size: 20, color: "red", speed: 3};
+
+    
+    /*function update() {
+        clearScreen()
+        circle(player.x, player.y, player.size, player.color);
+        player.x = player.x + player.speed;
+    }
+*/
+
+  function update(){
+    clearScreen();
+    circle(player.x, player.y, player.size, player.color);
+
+  if (keyboard.right) {
+    player.x = player.x + player.speed;
+  }
+  if (keyboard.left) {
+    player.x = player.x - player.speed;
+  }
+  if (keyboard.up) {
+    player.y = player.y - player.speed;
+  }
+  if (keyboard.down) {
+    player.y = player.y + player.speed;
+  }
+
+   }
+
+
+
+
 // ===== MIN PROJEKTPLAN =====
 // Spelidé: (skriv en kort beskrivning, 2-4 meningar)
-Min spelide är att skapa ett dungen ish action spel där man kan lette efter olika såker som kan vara
-power ups. Och finnas olika niveår som har 5 fiender på olika platser som skulle kunna röra sig mot dig.
+//Min spelide är att skapa ett dungen ish action spel där man kan lette efter olika såker som kan vara
+//power ups. Och finnas olika niveår som har 5 fiender på olika platser som skulle kunna röra sig mot dig.
 
 
 // --- SAKER JAG VILL ÖVA PÅ (utifrån tidigare feedback) ---
@@ -17,13 +59,13 @@ power ups. Och finnas olika niveår som har 5 fiender på olika platser som skul
 // Antal fiender/hinder: 5 fiender 
 
 // nivåer: 2 nivåer med olika svårigheter och ska kunna gå vidare till nästa niva 
-när man klar den nuvarande niva. räker bara med en backgrund på varja.
+//när man klar den nuvarande niva. räker bara med en backgrund på varja.
 
 // Mål (hur vinner/klarar man spelet?): Man vinner spelet när man klarar nivåan och dödar fiender. Man behöver döda
-alla fiender på nivån så att nycklen kan spawna
+//alla fiender på nivån så att nycklen kan spawna
 
 // Förlustvillkor (hur förlorar man?): när man blir träffad av en fiende så förlorar man. Spelaren dör
-och får börja om från början 
+//och får börja om från början 
 
 // --- MIN REKOMMENDATION (bör finnas) ---
 // 1.att fienderna ska kunna röra sig mot spelaren.
@@ -32,7 +74,7 @@ och får börja om från början
 // --- MIN UTMANING (kan finnas, om tid finns) ---
 // 1. en background som andras beroende på vilken nivå man är på. Som kan vara en bild på olika platser.
 // 2. kanske mer detiljer på fienderna och spelaren. till exempel att fienderna och spelaren ska ha olika färger 
-och olika former.
+//och olika former.
 
 // --- FÖRBÄTTRINGAR ATT GÖRA SEN ---
 // (Lägg till fler idéer här under hela projektet.
@@ -45,7 +87,7 @@ och olika former.
 
 // psudocode
 
-När spelet startar:
+/*När spelet startar:
     Flytta spelaren till start positionen
     Sen flytta spelaren åt höger med ett bestämt hastighet
     
@@ -64,4 +106,10 @@ När spelet startar:
 När spelet startar:
     placera power ups som ska finnas på nivån
     rita ut power ups på skärmen
-    randomisera power ups på olika platser på nivån
+    randomisera power ups på olika platser på nivån*/
+
+
+
+     </script>
+</body>
+</html> 
